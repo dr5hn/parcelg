@@ -28,16 +28,16 @@
     <p>{!! $user->phone !!}</p>
 </div>
 
-<!-- Fcm Id Field -->
+<!-- User Type Id Field -->
 <div class="form-group">
-    {!! Form::label('fcm_id', 'Fcm Id:') !!}
-    <p>{!! $user->fcm_id !!}</p>
+    {!! Form::label('user_type_id', 'User Type Id:') !!}
+    <p>{!! $user->user_type_id !!}</p>
 </div>
 
-<!-- Last Login Field -->
+<!-- Fcm Token Field -->
 <div class="form-group">
-    {!! Form::label('last_login', 'Last Login:') !!}
-    <p>{!! $user->last_login !!}</p>
+    {!! Form::label('fcm_token', 'Fcm Token:') !!}
+    <p>{!! $user->fcm_token !!}</p>
 </div>
 
 <!-- Device Field -->
@@ -56,6 +56,12 @@
 <div class="form-group">
     {!! Form::label('refresh_token', 'Refresh Token:') !!}
     <p>{!! $user->refresh_token !!}</p>
+</div>
+
+<!-- Last Login Field -->
+<div class="form-group">
+    {!! Form::label('last_login', 'Last Login:') !!}
+    <p>{!! $user->last_login !!}</p>
 </div>
 
 <!-- Created At Field -->

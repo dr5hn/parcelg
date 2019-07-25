@@ -69,6 +69,8 @@ class UserDataTable extends DataTable
             'last_name',
             'email',
             'phone',
+            'user_type_id',
+            'device',
             'status'
         ];
     }

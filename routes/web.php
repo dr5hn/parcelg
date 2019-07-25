@@ -39,7 +39,7 @@ Route::post(
 
 Route::resource('userTypes', 'UserTypeController');
 
-Route::resource('users', 'UserController');
+
 
 
 
@@ -52,3 +52,5 @@ Route::resource('cities', 'CityController');
 Route::resource('billShipAddresses', 'BillShipAddressController');
 
 Route::resource('documents', 'DocumentsController');
+
+Route::resource('users', 'UserController');

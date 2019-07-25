@@ -3,9 +3,6 @@
     <a href="{!! route('userTypes.index') !!}"><i class="fa fa-edit"></i><span>User Types</span></a>
 </li>
 
-<li class="{{ Request::is('users*') ? 'active' : '' }}">
-    <a href="{!! route('users.index') !!}"><i class="fa fa-edit"></i><span>Users</span></a>
-</li>
 
 
 <li class="{{ Request::is('countries*') ? 'active' : '' }}">
@@ -26,5 +23,9 @@
 
 <li class="{{ Request::is('documents*') ? 'active' : '' }}">
     <a href="{!! route('documents.index') !!}"><i class="fa fa-edit"></i><span>Documents</span></a>
+</li>
+
+<li class="{{ Request::is('users*') ? 'active' : '' }}">
+    <a href="{!! route('users.index') !!}"><i class="fa fa-edit"></i><span>Users</span></a>
 </li>
 

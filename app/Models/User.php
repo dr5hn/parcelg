@@ -36,15 +36,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *          type="string"
  *      ),
  *      @SWG\Property(
- *          property="fcm_id",
- *          description="fcm_id",
- *          type="string"
+ *          property="user_type_id",
+ *          description="user_type_id",
+ *          type="integer",
+ *          format="int32"
  *      ),
  *      @SWG\Property(
- *          property="last_login",
- *          description="last_login",
- *          type="string",
- *          format="date-time"
+ *          property="fcm_token",
+ *          description="fcm_token",
+ *          type="string"
  *      ),
  *      @SWG\Property(
  *          property="device",
@@ -60,6 +60,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *          property="refresh_token",
  *          description="refresh_token",
  *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="last_login",
+ *          description="last_login",
+ *          type="string",
+ *          format="date-time"
  *      ),
  *      @SWG\Property(
  *          property="created_at",
@@ -95,6 +101,7 @@ class User extends Model
         'last_name',
         'email',
         'phone',
+        'user_type_id',
         'device',
         'status'
     ];
@@ -110,7 +117,8 @@ class User extends Model
         'last_name' => 'string',
         'email' => 'string',
         'phone' => 'string',
-        'fcm_id' => 'string',
+        'user_type_id' => 'integer',
+        'fcm_token' => 'string',
         'device' => 'string',
         'access_token' => 'string',
         'refresh_token' => 'string',
@@ -126,5 +134,11 @@ class User extends Model
         
     ];
 
-    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     **/
+    public function userType()
+    {
+        return $this->hasOne(\App\Models\UserType::class, 'id', 'user_type_id');
+    }
 }

@@ -20,8 +20,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 
-Route::resource('users', 'UserAPIController');
+
 
 
 
 Route::resource('bill_ship_addresses', 'BillShipAddressAPIController');
+
+Route::resource('users', 'UserAPIController');

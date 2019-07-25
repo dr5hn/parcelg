@@ -13,13 +13,25 @@
 <!-- Email Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('email', 'Email:') !!}
-    {!! Form::email('email', null, ['class' => 'form-control']) !!}
+    {!! Form::text('email', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Phone Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('phone', 'Phone:') !!}
-    {!! Form::number('phone', null, ['class' => 'form-control']) !!}
+    {!! Form::text('phone', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- User Type Id Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('user_type_id', 'User Type Id:') !!}
+    {!! Form::select('user_type_id', ['Select User Type' => 'Select User Type'], null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Fcm Token Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('fcm_token', 'Fcm Token:') !!}
+    {!! Form::text('fcm_token', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Device Field -->
