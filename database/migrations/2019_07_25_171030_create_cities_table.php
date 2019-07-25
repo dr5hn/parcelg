@@ -18,10 +18,10 @@ class CreateCitiesTable extends Migration
             $table->string('name');
             $table->integer('state_id')->unsigned();
             $table->integer('country_id')->unsigned();
-            $table->boolean('status');
+            $table->boolean('status')->default(true);
             $table->timestamps();
-            $table->foreign('state_id')->references(' id')->on('states');
-            $table->foreign('country_id')->references(' id')->on('countries');
+            $table->foreign('state_id')->references('id')->on('states');
+            $table->foreign('country_id')->references('id')->on('countries');
         });
     }
 
@@ -32,6 +32,6 @@ class CreateCitiesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('cities');
+        Schema::dropIfExists('cities');
     }
 }

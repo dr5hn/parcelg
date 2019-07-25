@@ -54,3 +54,5 @@ Route::resource('billShipAddresses', 'BillShipAddressController');
 Route::resource('documents', 'DocumentsController');
 
 Route::resource('users', 'UserController');
+
+Route::resource('courierProviders', 'CourierProviderController');

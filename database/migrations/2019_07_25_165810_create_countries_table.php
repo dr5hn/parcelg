@@ -16,12 +16,12 @@ class CreateCountriesTable extends Migration
         Schema::create('countries', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->char('iso2');
-            $table->char('iso3');
-            $table->string('phonecode');
-            $table->string('capital');
-            $table->char('currency');
-            $table->boolean('status');
+            $table->char('iso2')->nullable();
+            $table->char('iso3')->nullable();
+            $table->string('phonecode')->nullable();
+            $table->string('capital')->nullable();
+            $table->char('currency')->nullable();
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreateCountriesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('countries');
+        Schema::dropIfExists('countries');
     }
 }

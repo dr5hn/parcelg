@@ -27,3 +27,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('bill_ship_addresses', 'BillShipAddressAPIController');
 
 Route::resource('users', 'UserAPIController');
+
+Route::resource('courier_providers', 'CourierProviderAPIController');

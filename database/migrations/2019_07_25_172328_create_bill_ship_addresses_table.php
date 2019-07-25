@@ -15,23 +15,25 @@ class CreateBillShipAddressesTable extends Migration
     {
         Schema::create('bill_ship_addresses', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('flat_no');
-            $table->string('building');
+            $table->string('flat_no')->nullable();
+            $table->string('building')->nullable();
             $table->string('street');
             $table->string('pincode');
             $table->string('area');
             $table->integer('city')->unsigned();
             $table->integer('state')->unsigned();
             $table->integer('country')->unsigned();
+            $table->integer('user')->unsigned();
             $table->string('type');
             $table->decimal('latitude');
             $table->decimal('longitude');
-            $table->boolean('status');
+            $table->boolean('status')->default(true);
             $table->timestamps();
             $table->softDeletes();
-            $table->foreign('city')->references(' id')->on('cities');
-            $table->foreign('state')->references(' id')->on('states');
-            $table->foreign('country')->references(' id')->on('countries');
+            $table->foreign('city')->references('id')->on('cities');
+            $table->foreign('state')->references('id')->on('states');
+            $table->foreign('country')->references('id')->on('countries');
+            $table->foreign('user')->references('id')->on('users');
         });
     }
 
@@ -42,6 +44,6 @@ class CreateBillShipAddressesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('bill_ship_addresses');
+        Schema::dropIfExists('bill_ship_addresses');
     }
 }
