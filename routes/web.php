@@ -41,3 +41,6 @@ Route::resource('userTypes', 'UserTypeController');
 
 Route::resource('users', 'UserController');
 
+
+
+Route::resource('countries', 'CountryController');
