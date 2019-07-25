@@ -35,4 +35,9 @@ Route::post(
     '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generateFromFile'
 );
 
+
+
+Route::resource('userTypes', 'UserTypeController');
+
 Route::resource('users', 'UserController');
+
