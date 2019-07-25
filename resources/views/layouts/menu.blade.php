@@ -24,3 +24,7 @@
     <a href="{!! route('billShipAddresses.index') !!}"><i class="fa fa-edit"></i><span>Bill Ship Addresses</span></a>
 </li>
 
+<li class="{{ Request::is('documents*') ? 'active' : '' }}">
+    <a href="{!! route('documents.index') !!}"><i class="fa fa-edit"></i><span>Documents</span></a>
+</li>
+

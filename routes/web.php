@@ -50,3 +50,5 @@ Route::resource('states', 'StateController');
 Route::resource('cities', 'CityController');
 
 Route::resource('billShipAddresses', 'BillShipAddressController');
+
+Route::resource('documents', 'DocumentsController');
