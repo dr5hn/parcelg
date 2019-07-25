@@ -12,3 +12,11 @@
     <a href="{!! route('countries.index') !!}"><i class="fa fa-edit"></i><span>Countries</span></a>
 </li>
 
+<li class="{{ Request::is('states*') ? 'active' : '' }}">
+    <a href="{!! route('states.index') !!}"><i class="fa fa-edit"></i><span>States</span></a>
+</li>
+
+<li class="{{ Request::is('cities*') ? 'active' : '' }}">
+    <a href="{!! route('cities.index') !!}"><i class="fa fa-edit"></i><span>Cities</span></a>
+</li>
+

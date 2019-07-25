@@ -44,3 +44,7 @@ Route::resource('users', 'UserController');
 
 
 Route::resource('countries', 'CountryController');
+
+Route::resource('states', 'StateController');
+
+Route::resource('cities', 'CityController');
