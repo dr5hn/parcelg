@@ -29,3 +29,5 @@ Route::resource('bill_ship_addresses', 'BillShipAddressAPIController');
 Route::resource('users', 'UserAPIController');
 
 Route::resource('courier_providers', 'CourierProviderAPIController');
+
+Route::resource('courier_provider_users', 'CourierProviderUsersAPIController');

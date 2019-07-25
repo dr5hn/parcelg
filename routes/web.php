@@ -56,3 +56,5 @@ Route::resource('documents', 'DocumentsController');
 Route::resource('users', 'UserController');
 
 Route::resource('courierProviders', 'CourierProviderController');
+
+Route::resource('courierProviderUsers', 'CourierProviderUsersController');
