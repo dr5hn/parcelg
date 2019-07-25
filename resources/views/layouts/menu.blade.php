@@ -20,3 +20,7 @@
     <a href="{!! route('cities.index') !!}"><i class="fa fa-edit"></i><span>Cities</span></a>
 </li>
 
+<li class="{{ Request::is('billShipAddresses*') ? 'active' : '' }}">
+    <a href="{!! route('billShipAddresses.index') !!}"><i class="fa fa-edit"></i><span>Bill Ship Addresses</span></a>
+</li>
+

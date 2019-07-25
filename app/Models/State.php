@@ -17,7 +17,6 @@ class State extends Model
 {
 
     public $table = 'states';
-    
 
 
     public $fillable = [
@@ -46,5 +45,21 @@ class State extends Model
         'name' => '.'
     ];
 
-    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     **/
+    public function cities()
+    {
+        return $this->hasMany(\App\Models\City::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     **/
+    public function country()
+    {
+        return $this->belongsTo(\App\Models\Country::class, 'id', 'country_id');
+    }
+
+
 }

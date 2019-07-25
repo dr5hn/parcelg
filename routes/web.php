@@ -48,3 +48,5 @@ Route::resource('countries', 'CountryController');
 Route::resource('states', 'StateController');
 
 Route::resource('cities', 'CityController');
+
+Route::resource('billShipAddresses', 'BillShipAddressController');

@@ -21,7 +21,7 @@ class Country extends Model
 {
 
     public $table = 'countries';
-    
+
 
 
     public $fillable = [
@@ -56,8 +56,16 @@ class Country extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     **/
+    public function states()
+    {
+        return $this->hasMany(\App\Models\State::class);
+    }
+
+
 }
