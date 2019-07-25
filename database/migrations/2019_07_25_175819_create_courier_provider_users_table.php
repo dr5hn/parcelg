@@ -17,7 +17,7 @@ class CreateCourierProviderUsersTable extends Migration
             $table->increments('id');
             $table->integer('provider_id')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->boolean('status');
+            $table->boolean('status')->default(false);
             $table->timestamps();
             $table->foreign('provider_id')->references(' id')->on('courier_providers');
             $table->foreign('user_id')->references(' id')->on('users');
@@ -31,6 +31,6 @@ class CreateCourierProviderUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('courier_provider_users');
+        Schema::dropIfExists('courier_provider_users');
     }
 }

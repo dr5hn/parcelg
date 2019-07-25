@@ -16,10 +16,10 @@ class CreateCourierProvidersTable extends Migration
         Schema::create('courier_providers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('business_name');
-            $table->string('gst_number');
-            $table->string('pan_number');
+            $table->string('gst_number')->nullable();
+            $table->string('pan_number')->nullable();
             $table->integer('owner_user_id')->unsigned();
-            $table->boolean('status');
+            $table->boolean('status')->default(false);
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('owner_user_id')->references(' id')->on('users');
@@ -33,6 +33,6 @@ class CreateCourierProvidersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('courier_providers');
+        Schema::dropIfExists('courier_providers');
     }
 }
