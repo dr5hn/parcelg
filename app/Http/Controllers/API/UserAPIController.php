@@ -112,7 +112,9 @@ class UserAPIController extends AppBaseController
 
         $user = $this->userRepository->create($input);
 
-        return $this->sendResponse($user->toArray(), 'User saved successfully');
+        $token = $user->createToken('ParcelG')->accessToken;
+
+        return $this->sendResponse(['token' => $token, 'user' => $user->toArray()], 'User saved successfully');
     }
 
     /**
