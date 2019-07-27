@@ -173,6 +173,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         \InfyOm\GeneratorBuilder\GeneratorBuilderServiceProvider::class,
         \InfyOm\RoutesExplorer\RoutesExplorerServiceProvider::class,
+        Yajra\DataTables\ButtonsServiceProvider::class,
         /*
          * Application Service Providers...
          */
