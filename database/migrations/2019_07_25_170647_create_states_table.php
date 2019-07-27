@@ -17,9 +17,9 @@ class CreateStatesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('country_id')->unsigned();
-            $table->binary('status')->default(true);
+            $table->boolean('status')->default(true);
             $table->timestamps();
-            $table->foreign('country_id')->references(' id')->on('countries');
+            $table->foreign('country_id')->references('id')->on('countries');
         });
     }
 

@@ -15,12 +15,12 @@ class CreateCourierProviderUsersTable extends Migration
     {
         Schema::create('courier_provider_users', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('provider_id')->unsigned();
-            $table->integer('user_id')->unsigned();
+            $table->integer('provider')->unsigned();
+            $table->unsignedBigInteger('user');
             $table->boolean('status')->default(false);
             $table->timestamps();
-            $table->foreign('provider_id')->references(' id')->on('courier_providers');
-            $table->foreign('user_id')->references(' id')->on('users');
+            $table->foreign('provider')->references('id')->on('courier_providers');
+            $table->foreign('user')->references('id')->on('users');
         });
     }
 

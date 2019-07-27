@@ -23,7 +23,7 @@ class CreateBillShipAddressesTable extends Migration
             $table->integer('city')->unsigned();
             $table->integer('state')->unsigned();
             $table->integer('country')->unsigned();
-            $table->integer('user')->unsigned();
+            $table->unsignedBigInteger('user');
             $table->string('type');
             $table->decimal('latitude');
             $table->decimal('longitude');

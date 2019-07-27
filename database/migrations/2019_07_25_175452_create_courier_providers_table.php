@@ -18,11 +18,11 @@ class CreateCourierProvidersTable extends Migration
             $table->string('business_name');
             $table->string('gst_number')->nullable();
             $table->string('pan_number')->nullable();
-            $table->integer('owner_user_id')->unsigned();
+            $table->unsignedBigInteger('owner_user_id');
             $table->boolean('status')->default(false);
             $table->timestamps();
             $table->softDeletes();
-            $table->foreign('owner_user_id')->references(' id')->on('users');
+            $table->foreign('owner_user_id')->references('id')->on('users');
         });
     }
 

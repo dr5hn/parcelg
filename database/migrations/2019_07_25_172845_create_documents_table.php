@@ -18,7 +18,7 @@ class CreateDocumentsTable extends Migration
             $table->text('proof_of_identity');
             $table->string('proof_of_identity_type');
             $table->text('proof_of_address');
-            $table->integer('user')->unsigned();
+            $table->unsignedBigInteger('user');
             $table->string('proof_of_address_type');
             $table->boolean('verification_status')->default(false);
             $table->timestamps();
