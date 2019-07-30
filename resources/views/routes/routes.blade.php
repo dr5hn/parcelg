@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>InfyOm Routes Explorer</title>
+    <title>ParcelG Routes Explorer</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -30,7 +30,7 @@
 
         <!-- Branding Image -->
         <a class="navbar-brand" href="{!! url('/') !!}">
-            InfyOm Routes Explorer
+            ParcelG Routes Explorer
         </a>
     </div>
 </nav>

@@ -12,11 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index');
 
@@ -35,13 +35,7 @@ Route::post(
     '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generateFromFile'
 );
 
-
-
 Route::resource('userTypes', 'UserTypeController');
-
-
-
-
 
 Route::resource('countries', 'CountryController');
 
