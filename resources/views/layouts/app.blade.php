@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <!-- Theme style -->
-    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="css/app.css">
 
     <!-- iCheck -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css">
@@ -39,7 +39,7 @@
 
             <!-- Logo -->
             <a href="#" class="logo">
-                <b>ParcelG</b>
+                <img src="{{ asset('storage/images/package.svg') }}" alt="ParcelG" width="40"> <b>ParcelG</b>
             </a>
 
             <!-- Header Navbar -->
@@ -56,16 +56,14 @@
                             <!-- Menu Toggle Button -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <!-- The user image in the navbar-->
-                                <img src="http://infyom.com/images/logo/blue_logo_150x150.jpg"
-                                     class="user-image" alt="User Image"/>
+                                <img src="{{ asset('storage/images/man.svg') }}" width="64" class="user-image" alt="User Image"/>
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
                                 <span class="hidden-xs">{!! Auth::user()->name !!}</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- The user image in the menu -->
                                 <li class="user-header">
-                                    <img src="http://infyom.com/images/logo/blue_logo_150x150.jpg"
-                                         class="img-circle" alt="User Image"/>
+                                    <img src="{{ asset('storage/images/man.svg') }}" width="64" class="user-image img-circle" alt="User Image"/>
                                     <p>
                                         {!! Auth::user()->name !!}
                                         <small>Member since {!! Auth::user()->created_at->format('M. Y') !!}</small>
@@ -98,11 +96,12 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             @yield('content')
+            <img src="{{ asset('storage/images/package.svg') }}" alt="ParcelG" width="100" class="footer-sticky-logo">
         </div>
 
         <!-- Main Footer -->
         <footer class="main-footer" style="max-height: 100px;text-align: center">
-            <strong>Copyright © 2016 <a href="#">Company</a>.</strong> All rights reserved.
+            Made with <3 By Darshan Gada
         </footer>
 
     </div>

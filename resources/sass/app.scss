@@ -10,7 +10,49 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.skin-blue .main-header .navbar,
+.skin-blue .main-header .logo,
+.main-footer {
+    background: $beige-medium;
+    color: $white;
+}
+
 .login-page,
-.register-page {
-    background: #fee5c7;
+.register-page,
+.content-wrapper {
+    background-color: $beige;
+}
+
+.skin-blue .wrapper,
+.skin-blue .main-sidebar,
+.skin-blue .left-side {
+    background-color: $beige-dark;
+    color: $white;
+}
+
+.skin-blue .sidebar a {
+    color: $white;
+}
+
+.skin-blue .sidebar-form input[type="text"], .skin-blue .sidebar-form .btn {
+    background-color: $beige;
+}
+
+.skin-blue .sidebar-form {
+    border-color: $beige;
+}
+
+.footer-sticky-logo {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.user-image {
+    background: $white;
+    opacity: 0.6;
+}
+
+h1, h2, h3, h4, h5, h6, p, th, td, tr {
+    color: $text-color;
 }
