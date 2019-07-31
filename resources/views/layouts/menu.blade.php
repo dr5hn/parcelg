@@ -49,3 +49,7 @@
     <a href="{!! route('notificationTypes.index') !!}"><i class="fa fa-edit"></i><span>Notification Types</span></a>
 </li>
 
+<li class="{{ Request::is('notifications*') ? 'active' : '' }}">
+    <a href="{!! route('notifications.index') !!}"><i class="fa fa-edit"></i><span>Notifications</span></a>
+</li>
+

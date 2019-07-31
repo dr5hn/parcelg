@@ -22,3 +22,6 @@ Route::middleware('auth:api')->group(function () {
     Route::resource('courier_providers', 'CourierProviderAPIController');
     Route::resource('courier_provider_users', 'CourierProviderUsersAPIController');
 });
+
+
+Route::resource('notifications', 'NotificationsAPIController');

@@ -61,3 +61,5 @@ Route::resource('deliveryTypes', 'DeliveryTypeController');
 Route::resource('consignmentTypes', 'ConsignmentTypeController');
 
 Route::resource('notificationTypes', 'NotificationTypeController');
+
+Route::resource('notifications', 'NotificationsController');
