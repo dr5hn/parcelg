@@ -53,6 +53,41 @@
     opacity: 0.6;
 }
 
-h1, h2, h3, h4, h5, h6, p, th, td, tr {
+h1, h2, h3, h4, h5, h6, p, th, td, tr, label {
     color: $text-color;
+}
+
+.box.box-primary, .main-footer {
+    border-top-color: $beige-dark;
+}
+
+.form-control:focus {
+    border-color: $beige-dark;
+}
+
+.btn-primary, .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: $beige-medium;
+    border-color: $beige-dark;
+}
+
+.btn-primary:hover {
+    background-color: $beige-dark;
+    border-color: $beige-dark;
+}
+
+.skin-blue .sidebar-menu>li.active>a {
+    border-left-color: $beige;
+}
+
+.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a, .skin-blue .sidebar-menu>li.menu-open>a, .skin-blue .main-header li.user-header {
+    background-color: $beige-medium;
+}
+
+.skin-blue .main-header .logo:hover,
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+    background-color: $beige-dark;
+}
+
+.sidebar p {
+    color: $white
 }
