@@ -37,3 +37,7 @@
     <a href="{!! route('courierProviderUsers.index') !!}"><i class="fa fa-edit"></i><span>Courier Provider Users</span></a>
 </li>
 
+<li class="{{ Request::is('deliveryTypes*') ? 'active' : '' }}">
+    <a href="{!! route('deliveryTypes.index') !!}"><i class="fa fa-edit"></i><span>Delivery Types</span></a>
+</li>
+

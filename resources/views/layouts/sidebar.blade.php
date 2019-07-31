@@ -10,9 +10,9 @@
             </div>
             <div class="pull-left info">
                 @if (Auth::guest())
-                <p>ParcelG</p>
+                    <p>ParcelG</p>
                 @else
-                    <p>{{ Auth::user()->name}}</p>
+                    <p>{{ Auth::user()->first_name}} {{ Auth::user()->last_name}}</p>
                 @endif
                 <!-- Status -->
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
