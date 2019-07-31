@@ -25,3 +25,5 @@ Route::middleware('auth:api')->group(function () {
 
 
 Route::resource('notifications', 'NotificationsAPIController');
+
+Route::resource('consignments', 'ConsignmentAPIController');

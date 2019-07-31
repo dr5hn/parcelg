@@ -53,3 +53,7 @@
     <a href="{!! route('notifications.index') !!}"><i class="fa fa-edit"></i><span>Notifications</span></a>
 </li>
 
+<li class="{{ Request::is('consignments*') ? 'active' : '' }}">
+    <a href="{!! route('consignments.index') !!}"><i class="fa fa-edit"></i><span>Consignments</span></a>
+</li>
+
