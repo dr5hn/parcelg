@@ -45,3 +45,7 @@
     <a href="{!! route('consignmentTypes.index') !!}"><i class="fa fa-edit"></i><span>Consignment Types</span></a>
 </li>
 
+<li class="{{ Request::is('notificationTypes*') ? 'active' : '' }}">
+    <a href="{!! route('notificationTypes.index') !!}"><i class="fa fa-edit"></i><span>Notification Types</span></a>
+</li>
+
