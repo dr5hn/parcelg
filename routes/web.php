@@ -18,37 +18,42 @@ Route::get('/', function () {
 
 Auth::routes(['register' => false]);
 
-Route::get('/home', 'HomeController@index');
+Route::group(['middleware' => ['auth']], function () {
 
-Route::get('generator_builder', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@builder');
+    Route::resource('userTypes', 'UserTypeController');
 
-Route::get('field_template', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@fieldTemplate');
+    Route::resource('countries', 'CountryController');
 
-Route::get('relation_field_template', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@relationFieldTemplate');
+    Route::resource('states', 'StateController');
 
-Route::post('generator_builder/generate', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generate');
+    Route::resource('cities', 'CityController');
 
-Route::post('generator_builder/rollback', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@rollback');
+    Route::resource('billShipAddresses', 'BillShipAddressController');
 
-Route::post(
-    'generator_builder/generate-from-file',
-    '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generateFromFile'
-);
+    Route::resource('documents', 'DocumentsController');
 
-Route::resource('userTypes', 'UserTypeController');
+    Route::resource('users', 'UserController');
 
-Route::resource('countries', 'CountryController');
+    Route::resource('courierProviders', 'CourierProviderController');
 
-Route::resource('states', 'StateController');
+    Route::resource('courierProviderUsers', 'CourierProviderUsersController');
 
-Route::resource('cities', 'CityController');
+    //
+    Route::get('generator_builder', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@builder');
 
-Route::resource('billShipAddresses', 'BillShipAddressController');
+    Route::get('field_template', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@fieldTemplate');
 
-Route::resource('documents', 'DocumentsController');
+    Route::get('relation_field_template', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@relationFieldTemplate');
 
-Route::resource('users', 'UserController');
+    Route::post('generator_builder/generate', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generate');
 
-Route::resource('courierProviders', 'CourierProviderController');
+    Route::post('generator_builder/rollback', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@rollback');
 
-Route::resource('courierProviderUsers', 'CourierProviderUsersController');
+    Route::post(
+        'generator_builder/generate-from-file',
+        '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generateFromFile'
+    );
+});
+
+
+Route::resource('deliveryTypes', 'DeliveryTypeController');
