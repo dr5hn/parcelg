@@ -57,3 +57,5 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 Route::resource('deliveryTypes', 'DeliveryTypeController');
+
+Route::resource('consignmentTypes', 'ConsignmentTypeController');

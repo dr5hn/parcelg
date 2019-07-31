@@ -41,3 +41,7 @@
     <a href="{!! route('deliveryTypes.index') !!}"><i class="fa fa-edit"></i><span>Delivery Types</span></a>
 </li>
 
+<li class="{{ Request::is('consignmentTypes*') ? 'active' : '' }}">
+    <a href="{!! route('consignmentTypes.index') !!}"><i class="fa fa-edit"></i><span>Consignment Types</span></a>
+</li>
+
