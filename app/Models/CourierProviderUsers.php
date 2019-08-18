@@ -49,7 +49,7 @@ class CourierProviderUsers extends Model
 {
 
     public $table = 'courier_provider_users';
-    
+
 
 
     public $fillable = [
@@ -76,7 +76,7 @@ class CourierProviderUsers extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
     /**
@@ -92,6 +92,6 @@ class CourierProviderUsers extends Model
      **/
     public function user()
     {
-        return $this->hasOne(\App\Models\User::class, 'id', 'user_id');
+        return $this->hasOne(\App\User::class, 'id', 'user_id');
     }
 }

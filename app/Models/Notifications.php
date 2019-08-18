@@ -65,7 +65,7 @@ class Notifications extends Model
 {
 
     public $table = 'notifications';
-    
+
 
 
     public $fillable = [
@@ -97,7 +97,7 @@ class Notifications extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
     /**
@@ -113,6 +113,6 @@ class Notifications extends Model
      **/
     public function user()
     {
-        return $this->hasOne(\App\Models\User::class, 'id', 'user_id');
+        return $this->hasOne(\App\User::class, 'id', 'user_id');
     }
 }

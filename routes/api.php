@@ -13,17 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::post('login', 'PassportController@login');
+Route::post('auth', 'APIAuthController@authenticate');
 
 Route::middleware('auth:api')->group(function () {
-    Route::get('user', 'PassportController@details');
     Route::resource('bill_ship_addresses', 'BillShipAddressAPIController');
     Route::resource('users', 'UserAPIController');
     Route::resource('courier_providers', 'CourierProviderAPIController');
     Route::resource('courier_provider_users', 'CourierProviderUsersAPIController');
+    Route::resource('notifications', 'NotificationsAPIController');
+    Route::resource('consignments', 'ConsignmentAPIController');
 });
-
-
-Route::resource('notifications', 'NotificationsAPIController');
-
-Route::resource('consignments', 'ConsignmentAPIController');

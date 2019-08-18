@@ -5,22 +5,112 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 use Webpatser\Uuid\Uuid;
-use Laravel\Passport\HasApiTokens;
 
-
+/**
+ * @SWG\Definition(
+ *      definition="User",
+ *      required={""},
+ *      @SWG\Property(
+ *          property="id",
+ *          description="id",
+ *          type="integer",
+ *          format="int32"
+ *      ),
+ *      @SWG\Property(
+ *          property="first_name",
+ *          description="first_name",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="last_name",
+ *          description="last_name",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="email",
+ *          description="email",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="phone",
+ *          description="phone",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="user_type_id",
+ *          description="user_type_id",
+ *          type="integer",
+ *          format="int32"
+ *      ),
+ *      @SWG\Property(
+ *          property="fcm_token",
+ *          description="fcm_token",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="device",
+ *          description="device",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="access_token",
+ *          description="access_token",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="refresh_token",
+ *          description="refresh_token",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="last_login",
+ *          description="last_login",
+ *          type="string",
+ *          format="date-time"
+ *      ),
+ *      @SWG\Property(
+ *          property="created_at",
+ *          description="created_at",
+ *          type="string",
+ *          format="date-time"
+ *      ),
+ *      @SWG\Property(
+ *          property="updated_at",
+ *          description="updated_at",
+ *          type="string",
+ *          format="date-time"
+ *      ),
+ *      @SWG\Property(
+ *          property="status",
+ *          description="status",
+ *          type="boolean"
+ *      )
+ * )
+ */
 class User extends Authenticatable
 {
-    use HasApiTokens, Notifiable;
+    use SoftDeletes, Notifiable;
+
+    public $table = 'users';
+
+    protected $dates = ['deleted_at'];
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
-        'first_name', 'last_name', 'email', 'phone', 'password',
+    public $fillable = [
+        'first_name',
+        'last_name',
+        'email',
+        'phone',
+        'user_type_id',
+        'device',
+        'status'
     ];
 
     /**
@@ -29,7 +119,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'api_token',
     ];
 
     /**
@@ -38,7 +128,27 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
+        'id' => 'integer',
+        'first_name' => 'string',
+        'last_name' => 'string',
+        'email' => 'string',
+        'phone' => 'string',
+        'user_type_id' => 'integer',
+        'fcm_token' => 'string',
+        'device' => 'string',
+        'api_token' => 'string',
+        'status' => 'boolean',
         'email_verified_at' => 'datetime',
+        'phone_verified_at' => 'datetime',
+    ];
+
+    /**
+     * Validation rules
+     *
+     * @var array
+     */
+    public static $rules = [
+
     ];
 
     public static function boot()

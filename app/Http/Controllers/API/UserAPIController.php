@@ -4,7 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateUserAPIRequest;
 use App\Http\Requests\API\UpdateUserAPIRequest;
-use App\Models\User;
+use App\User;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
@@ -112,9 +112,7 @@ class UserAPIController extends AppBaseController
 
         $user = $this->userRepository->create($input);
 
-        $token = $user->createToken('ParcelG')->accessToken;
-
-        return $this->sendResponse(['token' => $token, 'user' => $user->toArray()], 'User saved successfully');
+        return $this->sendResponse(['user' => $user->toArray()], 'User saved successfully');
     }
 
     /**

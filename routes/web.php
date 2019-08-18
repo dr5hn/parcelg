@@ -15,10 +15,11 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-
-Auth::routes(['register' => false]);
+Auth::routes(['register' => false, 'reset' => false]);
 
 Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/home', 'HomeController@index');
 
     Route::resource('userTypes', 'UserTypeController');
 
@@ -38,6 +39,16 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('courierProviderUsers', 'CourierProviderUsersController');
 
+    Route::resource('deliveryTypes', 'DeliveryTypeController');
+
+    Route::resource('consignmentTypes', 'ConsignmentTypeController');
+
+    Route::resource('notificationTypes', 'NotificationTypeController');
+
+    Route::resource('notifications', 'NotificationsController');
+
+    Route::resource('consignments', 'ConsignmentController');
+
     //
     Route::get('generator_builder', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@builder');
 
@@ -55,13 +66,6 @@ Route::group(['middleware' => ['auth']], function () {
     );
 });
 
-
-Route::resource('deliveryTypes', 'DeliveryTypeController');
-
-Route::resource('consignmentTypes', 'ConsignmentTypeController');
-
-Route::resource('notificationTypes', 'NotificationTypeController');
-
-Route::resource('notifications', 'NotificationsController');
-
-Route::resource('consignments', 'ConsignmentController');
+Route::get('/debug-sentry', function () {
+    throw new Exception('My first Sentry error!');
+});

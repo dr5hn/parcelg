@@ -60,7 +60,7 @@ class CourierProvider extends Model
     use SoftDeletes;
 
     public $table = 'courier_providers';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -91,7 +91,7 @@ class CourierProvider extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
     /**
@@ -99,6 +99,6 @@ class CourierProvider extends Model
      **/
     public function user()
     {
-        return $this->hasOne(\App\Models\User::class, 'id', 'owner_user_id');
+        return $this->hasOne(\App\User::class, 'id', 'owner_user_id');
     }
 }

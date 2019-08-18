@@ -36,7 +36,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['daily'],
+            'channels' => ['daily', 'sentry', 'slack'],
             'ignore_exceptions' => false,
         ],
 
@@ -88,6 +88,13 @@ return [
         'errorlog' => [
             'driver' => 'errorlog',
             'level' => 'debug',
+        ],
+
+        'sentry' => [
+            'driver' => 'sentry',
+            'level'  => null, // The minimum monolog logging level at which this handler will be triggered
+                          // For example: `\Monolog\Logger::ERROR`
+            'bubble' => true, // Whether the messages that are handled can bubble up the stack or not
         ],
     ],
 
