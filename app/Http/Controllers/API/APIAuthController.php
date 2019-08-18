@@ -40,7 +40,10 @@ class ApiAuthController extends AppBaseController
         $validator = $this->validateData((array)$data,$fieldsToValidate);
         if(!$validator) return $this->sendError('Error !! Some Fields are missing/empty, Please check all required fields.', 206);
 
-        $user = User::firstOrCreate($data);
+        $user = User::where('phone', $data['phone'])->first();
+        if (empty($user)) {
+            $user = User::create($data);
+        }
         $token = Str::random(60);
         $user->forceFill([
             'api_token' => hash('sha256', $token),
