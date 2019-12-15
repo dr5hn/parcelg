@@ -133,12 +133,12 @@ php artisan iseed projects,project_logs,permission_role,permissions,menu_items,m
 ```
 
 ## Docker Fans
-This application can be also run on docker
--- Development Friendly
+This application can be also run on docker<br>
+-- Development Friendly<br>
 -- Not for Production
 
 ### PreRequisites
-[Docker Desktop](https://www.docker.com/products/docker-desktop)
+[Docker Desktop](https://www.docker.com/products/docker-desktop)<br>
 MySQL Workbench or Any Native MYSQL Tools except PHPMYADMIN
 
 ### Play Commands
