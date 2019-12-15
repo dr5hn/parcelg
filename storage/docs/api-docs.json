@@ -1,10 +1,10 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "Laravel Generator APIs",
+        "title": "ParcelG APIs",
         "version": "1.0.0"
     },
-    "basePath": "/api/v1",
+    "basePath": "/api",
     "paths": {
         "/billShipAddresses": {
             "get": {
@@ -180,6 +180,205 @@
                         "name": "id",
                         "in": "path",
                         "description": "id of BillShipAddress",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/consignments": {
+            "get": {
+                "tags": [
+                    "Consignment"
+                ],
+                "summary": "Get a listing of the Consignments.",
+                "description": "Get all Consignments",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Consignment"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Consignment"
+                ],
+                "summary": "Store a newly created Consignment in storage",
+                "description": "Store Consignment",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Consignment that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Consignment"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Consignment"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/consignments/{id}": {
+            "get": {
+                "tags": [
+                    "Consignment"
+                ],
+                "summary": "Display the specified Consignment",
+                "description": "Get Consignment",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Consignment",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Consignment"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Consignment"
+                ],
+                "summary": "Update the specified Consignment in storage",
+                "description": "Update Consignment",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Consignment",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Consignment that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Consignment"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Consignment"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Consignment"
+                ],
+                "summary": "Remove the specified Consignment from storage",
+                "description": "Delete Consignment",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Consignment",
                         "required": true,
                         "type": "integer"
                     }
@@ -603,6 +802,205 @@
                 }
             }
         },
+        "/notifications": {
+            "get": {
+                "tags": [
+                    "Notifications"
+                ],
+                "summary": "Get a listing of the Notifications.",
+                "description": "Get all Notifications",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Notifications"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Notifications"
+                ],
+                "summary": "Store a newly created Notifications in storage",
+                "description": "Store Notifications",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Notifications that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Notifications"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Notifications"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/notifications/{id}": {
+            "get": {
+                "tags": [
+                    "Notifications"
+                ],
+                "summary": "Display the specified Notifications",
+                "description": "Get Notifications",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Notifications",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Notifications"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Notifications"
+                ],
+                "summary": "Update the specified Notifications in storage",
+                "description": "Update Notifications",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Notifications",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Notifications that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Notifications"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Notifications"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Notifications"
+                ],
+                "summary": "Remove the specified Notifications from storage",
+                "description": "Delete Notifications",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Notifications",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
         "/users": {
             "get": {
                 "tags": [
@@ -879,6 +1277,52 @@
                 }
             }
         },
+        "Consignment": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "provider_id": {
+                    "description": "provider_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "consignment_type_id": {
+                    "description": "consignment_type_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "delivery_type_id": {
+                    "description": "delivery_type_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "rate": {
+                    "description": "rate",
+                    "type": "float",
+                    "format": "float"
+                },
+                "created_at": {
+                    "description": "created_at",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated_at": {
+                    "description": "updated_at",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "status": {
+                    "description": "status",
+                    "type": "boolean"
+                }
+            }
+        },
         "CourierProvider": {
             "required": [
                 ""
@@ -941,6 +1385,55 @@
                     "description": "user_id",
                     "type": "integer",
                     "format": "int32"
+                },
+                "created_at": {
+                    "description": "created_at",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated_at": {
+                    "description": "updated_at",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "status": {
+                    "description": "status",
+                    "type": "boolean"
+                }
+            }
+        },
+        "Notifications": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "description": "message",
+                    "type": "string"
+                },
+                "user_id": {
+                    "description": "user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "notification_type_id": {
+                    "description": "notification_type_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "channel": {
+                    "description": "channel",
+                    "type": "string"
+                },
+                "schedule": {
+                    "description": "schedule",
+                    "type": "string",
+                    "format": "date-time"
                 },
                 "created_at": {
                     "description": "created_at",
