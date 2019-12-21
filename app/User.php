@@ -110,7 +110,9 @@ class User extends Authenticatable
         'phone',
         'user_type_id',
         'device',
-        'status'
+        'status',
+        'password',
+        'api_token'
     ];
 
     /**
@@ -119,7 +121,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token', 'api_token',
+        'password', 'remember_token',
     ];
 
     /**
@@ -164,4 +166,11 @@ class User extends Authenticatable
     {
         return Uuid::generate();
     }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
+
 }
+
