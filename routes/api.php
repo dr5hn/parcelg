@@ -13,8 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::post('auth', 'APIAuthController@authenticate');
-
 Route::middleware('auth:api')->group(function () {
     Route::resource('bill_ship_addresses', 'BillShipAddressAPIController');
     Route::resource('users', 'UserAPIController');
@@ -22,4 +20,14 @@ Route::middleware('auth:api')->group(function () {
     Route::resource('courier_provider_users', 'CourierProviderUsersAPIController');
     Route::resource('notifications', 'NotificationsAPIController');
     Route::resource('consignments', 'ConsignmentAPIController');
+});
+
+
+Route::prefix('user')->group(function () {
+    Route::post('login','AuthAPIController@login' );
+    Route::post('signup','AuthAPIController@signup');
+});
+
+Route::fallback(function() {
+    return 'You are lost';
 });
