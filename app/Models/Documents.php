@@ -17,7 +17,6 @@ use Eloquent as Model;
  */
 class Documents extends Model
 {
-
     public $table = 'documents';
     
 
@@ -52,6 +51,4 @@ class Documents extends Model
     public static $rules = [
         
     ];
-
-    
 }

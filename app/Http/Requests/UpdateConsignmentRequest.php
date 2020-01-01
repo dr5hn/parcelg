@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use App\Models\Consignment;
+use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateConsignmentRequest extends FormRequest
 {

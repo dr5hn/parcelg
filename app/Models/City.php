@@ -18,7 +18,6 @@ use Eloquent as Model;
  */
 class City extends Model
 {
-
     public $table = 'cities';
 
 

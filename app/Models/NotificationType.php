@@ -15,7 +15,6 @@ use Eloquent as Model;
  */
 class NotificationType extends Model
 {
-
     public $table = 'notification_types';
     
 
@@ -45,6 +44,4 @@ class NotificationType extends Model
     public static $rules = [
         
     ];
-
-    
 }

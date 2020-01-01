@@ -3,9 +3,9 @@
 use App\Models\BillShipAddress;
 use App\Repositories\BillShipAddressRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Tests\ApiTestTrait;
 use Tests\TestCase;
 use Tests\Traits\MakeBillShipAddressTrait;
-use Tests\ApiTestTrait;
 
 class BillShipAddressRepositoryTest extends TestCase
 {

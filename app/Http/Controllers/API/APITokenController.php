@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\API;
 
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Str;
 
 // https://codebriefly.com/laravel-5-6-custom-token-base-api-authentication/
 // https://laravel.com/docs/5.8/api-authentication
@@ -27,5 +26,4 @@ class ApiTokenController extends Controller
 
         return ['token' => $token];
     }
-
 }

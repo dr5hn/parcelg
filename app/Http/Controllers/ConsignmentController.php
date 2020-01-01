@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\ConsignmentDataTable;
-use App\Http\Requests;
 use App\Http\Requests\CreateConsignmentRequest;
 use App\Http\Requests\UpdateConsignmentRequest;
 use App\Repositories\ConsignmentRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
 use Response;
 
 class ConsignmentController extends AppBaseController

@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Models\UserType;
-use App\Repositories\BaseRepository;
 
 /**
  * Class UserTypeRepository

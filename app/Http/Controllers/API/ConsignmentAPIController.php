@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\API\CreateConsignmentAPIRequest;
 use App\Http\Requests\API\UpdateConsignmentAPIRequest;
 use App\Models\Consignment;
 use App\Repositories\ConsignmentRepository;
 use Illuminate\Http\Request;
-use App\Http\Controllers\AppBaseController;
 use Response;
 
 /**

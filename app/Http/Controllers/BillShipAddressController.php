@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\BillShipAddressDataTable;
-use App\Http\Requests;
 use App\Http\Requests\CreateBillShipAddressRequest;
 use App\Http\Requests\UpdateBillShipAddressRequest;
 use App\Repositories\BillShipAddressRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
 use Response;
 
 class BillShipAddressController extends AppBaseController

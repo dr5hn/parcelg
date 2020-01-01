@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Models\CourierProvider;
-use App\Repositories\BaseRepository;
 
 /**
  * Class CourierProviderRepository

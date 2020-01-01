@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Models\Documents;
-use App\Repositories\BaseRepository;
 
 /**
  * Class DocumentsRepository

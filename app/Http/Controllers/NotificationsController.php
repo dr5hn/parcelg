@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\NotificationsDataTable;
-use App\Http\Requests;
 use App\Http\Requests\CreateNotificationsRequest;
 use App\Http\Requests\UpdateNotificationsRequest;
 use App\Repositories\NotificationsRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
 use Response;
 
 class NotificationsController extends AppBaseController

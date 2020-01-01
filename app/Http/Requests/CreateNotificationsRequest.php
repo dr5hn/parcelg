@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use App\Models\Notifications;
+use Illuminate\Foundation\Http\FormRequest;
 
 class CreateNotificationsRequest extends FormRequest
 {

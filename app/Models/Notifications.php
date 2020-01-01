@@ -63,7 +63,6 @@ use Eloquent as Model;
  */
 class Notifications extends Model
 {
-
     public $table = 'notifications';
 
 

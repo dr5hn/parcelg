@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use App\Models\CourierProviderUsers;
+use Illuminate\Foundation\Http\FormRequest;
 
 class CreateCourierProviderUsersRequest extends FormRequest
 {

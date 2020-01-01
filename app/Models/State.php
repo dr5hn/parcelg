@@ -15,7 +15,6 @@ use Eloquent as Model;
  */
 class State extends Model
 {
-
     public $table = 'states';
 
 
@@ -60,6 +59,4 @@ class State extends Model
     {
         return $this->belongsTo(\App\Models\Country::class, 'id', 'country_id');
     }
-
-
 }

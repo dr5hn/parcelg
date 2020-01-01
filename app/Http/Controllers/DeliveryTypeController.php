@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\DeliveryTypeDataTable;
-use App\Http\Requests;
 use App\Http\Requests\CreateDeliveryTypeRequest;
 use App\Http\Requests\UpdateDeliveryTypeRequest;
 use App\Repositories\DeliveryTypeRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
 use Response;
 
 class DeliveryTypeController extends AppBaseController

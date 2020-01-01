@@ -1,10 +1,10 @@
 <?php namespace Tests\APIs;
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Tests\ApiTestTrait;
 use Tests\TestCase;
 use Tests\Traits\MakeCourierProviderTrait;
-use Tests\ApiTestTrait;
 
 class CourierProviderApiTest extends TestCase
 {

@@ -1,11 +1,11 @@
 <?php namespace Tests\Repositories;
 
-use App\User;
 use App\Repositories\UserRepository;
+use App\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Tests\ApiTestTrait;
 use Tests\TestCase;
 use Tests\Traits\MakeUserTrait;
-use Tests\ApiTestTrait;
 
 class UserRepositoryTest extends TestCase
 {

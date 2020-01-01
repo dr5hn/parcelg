@@ -3,8 +3,8 @@
 namespace App\DataTables;
 
 use App\User;
-use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
+use Yajra\DataTables\Services\DataTable;
 
 class UserDataTable extends DataTable
 {

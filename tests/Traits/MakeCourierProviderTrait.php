@@ -1,8 +1,8 @@
 <?php namespace Tests\Traits;
 
-use Faker\Factory as Faker;
 use App\Models\CourierProvider;
 use App\Repositories\CourierProviderRepository;
+use Faker\Factory as Faker;
 
 trait MakeCourierProviderTrait
 {

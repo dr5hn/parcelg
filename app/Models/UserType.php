@@ -14,7 +14,6 @@ use Eloquent as Model;
  */
 class UserType extends Model
 {
-
     public $table = 'user_types';
     
 
@@ -43,6 +42,4 @@ class UserType extends Model
     public static $rules = [
         
     ];
-
-    
 }
