@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\API\CreateCourierProviderAPIRequest;
 use App\Http\Requests\API\UpdateCourierProviderAPIRequest;
 use App\Models\CourierProvider;
 use App\Repositories\CourierProviderRepository;
 use Illuminate\Http\Request;
-use App\Http\Controllers\AppBaseController;
 use Response;
 
 /**

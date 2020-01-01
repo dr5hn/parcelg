@@ -1,8 +1,8 @@
 <?php namespace Tests\Traits;
 
-use Faker\Factory as Faker;
 use App\Models\BillShipAddress;
 use App\Repositories\BillShipAddressRepository;
+use Faker\Factory as Faker;
 
 trait MakeBillShipAddressTrait
 {

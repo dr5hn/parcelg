@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,10 +23,10 @@ Route::middleware('auth:api')->group(function () {
 
 
 Route::prefix('user')->group(function () {
-    Route::post('login','AuthAPIController@login' );
-    Route::post('signup','AuthAPIController@signup');
+    Route::post('login', 'AuthAPIController@login');
+    Route::post('signup', 'AuthAPIController@signup');
 });
 
-Route::fallback(function() {
+Route::fallback(function () {
     return 'You are lost';
 });

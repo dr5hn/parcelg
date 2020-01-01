@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Models\NotificationType;
-use App\Repositories\BaseRepository;
 
 /**
  * Class NotificationTypeRepository

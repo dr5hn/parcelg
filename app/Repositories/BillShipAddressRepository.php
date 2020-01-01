@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Models\BillShipAddress;
-use App\Repositories\BaseRepository;
 
 /**
  * Class BillShipAddressRepository

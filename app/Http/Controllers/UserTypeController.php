@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\UserTypeDataTable;
-use App\Http\Requests;
 use App\Http\Requests\CreateUserTypeRequest;
 use App\Http\Requests\UpdateUserTypeRequest;
 use App\Repositories\UserTypeRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
 use Response;
 
 class UserTypeController extends AppBaseController

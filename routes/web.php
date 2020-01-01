@@ -18,7 +18,6 @@ Route::get('/', function () {
 Auth::routes(['register' => false, 'reset' => false]);
 
 Route::group(['middleware' => ['auth']], function () {
-
     Route::get('/home', 'HomeController@index');
 
     Route::resource('userTypes', 'UserTypeController');

@@ -3,8 +3,8 @@
 namespace App\DataTables;
 
 use App\Models\CourierProvider;
-use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
+use Yajra\DataTables\Services\DataTable;
 
 class CourierProviderDataTable extends DataTable
 {

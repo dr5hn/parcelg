@@ -14,7 +14,6 @@ use Eloquent as Model;
  */
 class ConsignmentType extends Model
 {
-
     public $table = 'consignment_types';
     
 
@@ -43,6 +42,4 @@ class ConsignmentType extends Model
     public static $rules = [
         
     ];
-
-    
 }

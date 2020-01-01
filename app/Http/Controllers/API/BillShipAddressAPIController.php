@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\API\CreateBillShipAddressAPIRequest;
 use App\Http\Requests\API\UpdateBillShipAddressAPIRequest;
 use App\Models\BillShipAddress;
 use App\Repositories\BillShipAddressRepository;
 use Illuminate\Http\Request;
-use App\Http\Controllers\AppBaseController;
 use Response;
 
 /**

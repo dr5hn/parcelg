@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\DocumentsDataTable;
-use App\Http\Requests;
 use App\Http\Requests\CreateDocumentsRequest;
 use App\Http\Requests\UpdateDocumentsRequest;
 use App\Repositories\DocumentsRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
 use Response;
 
 class DocumentsController extends AppBaseController

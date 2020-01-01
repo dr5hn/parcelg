@@ -1,8 +1,8 @@
 <?php namespace Tests\Traits;
 
-use Faker\Factory as Faker;
-use App\User;
 use App\Repositories\UserRepository;
+use App\User;
+use Faker\Factory as Faker;
 
 trait MakeUserTrait
 {

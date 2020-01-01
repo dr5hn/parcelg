@@ -3,9 +3,9 @@
 use App\Models\CourierProvider;
 use App\Repositories\CourierProviderRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Tests\ApiTestTrait;
 use Tests\TestCase;
 use Tests\Traits\MakeCourierProviderTrait;
-use Tests\ApiTestTrait;
 
 class CourierProviderRepositoryTest extends TestCase
 {

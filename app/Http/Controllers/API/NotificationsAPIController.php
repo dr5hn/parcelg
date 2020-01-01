@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\API\CreateNotificationsAPIRequest;
 use App\Http\Requests\API\UpdateNotificationsAPIRequest;
 use App\Models\Notifications;
 use App\Repositories\NotificationsRepository;
 use Illuminate\Http\Request;
-use App\Http\Controllers\AppBaseController;
 use Response;
 
 /**

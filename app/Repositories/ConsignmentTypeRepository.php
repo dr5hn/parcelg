@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Models\ConsignmentType;
-use App\Repositories\BaseRepository;
 
 /**
  * Class ConsignmentTypeRepository

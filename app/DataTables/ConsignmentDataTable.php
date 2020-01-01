@@ -3,8 +3,8 @@
 namespace App\DataTables;
 
 use App\Models\Consignment;
-use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
+use Yajra\DataTables\Services\DataTable;
 
 class ConsignmentDataTable extends DataTable
 {

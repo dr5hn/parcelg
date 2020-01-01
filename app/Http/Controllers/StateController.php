@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateStateRequest;
 use App\Http\Requests\UpdateStateRequest;
 use App\Repositories\StateRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Response;
 
 class StateController extends AppBaseController

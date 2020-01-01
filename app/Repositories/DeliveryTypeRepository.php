@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Models\DeliveryType;
-use App\Repositories\BaseRepository;
 
 /**
  * Class DeliveryTypeRepository

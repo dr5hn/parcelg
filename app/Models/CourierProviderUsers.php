@@ -47,7 +47,6 @@ use Eloquent as Model;
  */
 class CourierProviderUsers extends Model
 {
-
     public $table = 'courier_provider_users';
 
 

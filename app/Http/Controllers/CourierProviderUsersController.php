@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\CourierProviderUsersDataTable;
-use App\Http\Requests;
 use App\Http\Requests\CreateCourierProviderUsersRequest;
 use App\Http\Requests\UpdateCourierProviderUsersRequest;
 use App\Repositories\CourierProviderUsersRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
 use Response;
 
 class CourierProviderUsersController extends AppBaseController

@@ -19,7 +19,6 @@ use Eloquent as Model;
  */
 class Country extends Model
 {
-
     public $table = 'countries';
 
 
@@ -66,6 +65,4 @@ class Country extends Model
     {
         return $this->hasMany(\App\Models\State::class);
     }
-
-
 }

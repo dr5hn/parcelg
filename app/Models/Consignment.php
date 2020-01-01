@@ -59,7 +59,6 @@ use Eloquent as Model;
  */
 class Consignment extends Model
 {
-
     public $table = 'consignments';
     
 
