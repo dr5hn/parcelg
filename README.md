@@ -169,10 +169,12 @@ $ docker ps -aq --no-trunc -f status=exited | xargs docker rm
 http://127.0.0.1:8080/
 
 ### Access DB
+```
 Server : 127.0.0.1
 User : root
 Password : mysql
 Port : 33061
+```
 
 ### Access Generator
 http://localhost:8081/generator_builder
@@ -184,10 +186,19 @@ http://localhost:8081/routes
 http://localhost:8081/api/docs
 
 ### Login
+```
 http://localhost:8081
 user: gadadarshan@gmail.com
 pass: 12345678
+```
 
+## Production Deployment
+```
+php artisan deploy prod
+```
+Note :
+- When asks for `2tx6djwonze@cms.parcelg.com's password:` [Enter cPanel Password]
+- When asks for `Initialized empty Git repository in /home/z2tx6djwonze/public_html/padmin/releases/1/.git/` Enter your git username and password
 
 ## References
 https://labs.infyom.com/laravelgenerator/docs/6.0/installation<br/>
